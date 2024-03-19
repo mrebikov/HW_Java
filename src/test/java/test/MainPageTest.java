@@ -11,10 +11,11 @@ public class MainPageTest extends BaseConfig {
     public void testRtOpenFeedback() {
         new RtPage(driver)
                 .checkElementIsDisplayed();
+        new RtPage(driver)
+                .checkElementIsDisplayed();
+        new RtPage(driver)
+                .checkElementIsDisplayed();
+        new RtPage(driver)
+                .checkElementIsDisplayed();
     }
-
-    public void test() {}
-
-    public void test1() {}
-
 }
