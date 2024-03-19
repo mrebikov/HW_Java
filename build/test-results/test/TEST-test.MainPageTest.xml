@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.MainPageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-14T14:30:49" hostname="MAXIM" time="5.649">
+  <properties/>
+  <testcase name="testRtOpenFeedback()" classname="test.MainPageTest" time="5.649"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[мар. 14, 2024 5:30:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 122, returning the closest version; found: 119; Please update to a Selenium version that supports CDP version 122
+]]></system-err>
+</testsuite>
