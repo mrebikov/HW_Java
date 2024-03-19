@@ -7,9 +7,14 @@ import page.RtPage;
 public class MainPageTest extends BaseConfig {
 
     @Test
-    @DisplayName("Какая то проверка")
+    @DisplayName("Какая")
     public void testRtOpenFeedback() {
         new RtPage(driver)
                 .checkElementIsDisplayed();
     }
+
+    public void test() {}
+
+    public void test1() {}
+
 }
