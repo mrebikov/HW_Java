@@ -1,0 +1,1 @@
+{"uuid":"c5061821-7e75-4c1a-b070-4fbd6bf1df14","name":"MainPageTest","children":["dbd723c5-014c-4a4d-af48-4bd610374c8b"],"befores":[{"name":"launchDriver","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1710426648629,"stop":1710426649316}],"afters":[],"start":1710426648600,"stop":1710426655125}

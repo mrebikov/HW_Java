@@ -1,0 +1,51 @@
+plugins {
+    id "org.gradle.test-retry" version "1.5.3"
+    id 'java'
+}
+
+sourceCompatibility = 17.0
+targetCompatibility = 17.0
+
+group = 'ru.rtkit'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.22.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.10.0'
+    implementation group: 'io.appium', name: 'java-client', version: '9.0.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.10.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.10.0'
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-suite', version: '1.8.1'
+    implementation 'io.rest-assured:rest-assured:5.4.0'
+    implementation group: 'org.json', name: 'json', version: '20231013'
+    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.25.0'
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.25.0'
+    testImplementation group: 'org.aeonbits.owner', name: 'owner', version: '1.0.12'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.15.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.3'
+}
+
+test {
+    systemProperties = [
+            "junit.jupiter.extensions.autodetection.enabled": "true",
+            "org.aspectj.weaver.Dump.condition"             : "abort",
+            "file.encoding"                                 : "utf-8",
+    ]
+
+    useJUnitPlatform()
+    jvmArgs "-noverify"
+}
+
+tasks.withType(JavaCompile).configureEach() {
+    options.encoding = 'UTF-8'
+}
+
+configurations {
+    testCompile
+}
